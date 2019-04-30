@@ -1,0 +1,36 @@
+Last Modified	:	30-April-2019 (Tuesday)
+______________________________________________________________________________________
+
+This program code splits the frames of video and saves into "images" folder.
+Then it loads the images stored in 'images' folder.
+Performs thresholding and saves threshold images in folder "threshold_images".
+Then it finds the centre points of droplet in threshold image.
+Finally it captures a surrounding window around droplet and saves in "final_images".
+______________________________________________________________________________________
+
+Following action should be taken before running the code for smooth operation.
+Create a folder named "images" in the folder where code has been placed.
+Put all the holography images in "images" folder.
+Then create two more folders with names "threshold_images" and "final_images".
+Make following change into the code file "separateFrames.m".
+* Line-2:
+	Write the file name of Input video.
+* Line-7:
+	Define complete working directory of "images" folder.
+
+Now make following change into the code file "find_region_around_droplet.m" and run it.
+
+* Line-10:
+	Define the surrounding window size.
+* Line-11:
+	Define complete directory where code is present.
+
+When the program execution is complete,
+then folder "images" will contain all the frames of input video.
+And the folder "threshold_images" will contain all the threshold images.
+Folder "final_images" will contain images of surrounding window around droplet.
+
+Code will also create a video file with name "Threshold_Video.avi".
+It will be created in the same folder where the code is.
+This video shows the threshold result.
+______________________________________________________________________________________
